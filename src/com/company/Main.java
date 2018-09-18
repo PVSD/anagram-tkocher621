@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Main {
 
-    static boolean contains(char b, char[] array) {
+    private static boolean contains(char b, char[] array) {
         for (char a : array) {
             if (a == b) {
                 return true;
@@ -12,7 +12,7 @@ public class Main {
         return false;
     }
 
-    static void RemoveAt(int index, char[] array)
+    /*private static void RemoveAt(int index, char[] array)
     {
         char[] end = new char[array.length];
 
@@ -25,7 +25,7 @@ public class Main {
         {
             end[i] = array[i];
         }
-    }
+    }*/
 
     public static void main(String[] args) {
 
@@ -41,16 +41,23 @@ public class Main {
         char[] s1Array = s1.toCharArray();
         char[] s2Array = s2.toCharArray();
 
+        int count = 0;
+
         for (char a: s1Array)
         {
             if (contains(a, s2Array))
             {
-
+                count++;
             }
         }
 
-        RemoveAt(4, s1Array);
-
-        System.out.println(s1Array.toString());
+        if (count == s2Array.length)
+        {
+            System.out.println("Yes, they are anagrams.");
+        }
+        else
+        {
+            System.out.println("No, they are not anagrams.");
+        }
     }
 }
