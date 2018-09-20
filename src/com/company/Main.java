@@ -38,8 +38,8 @@ public class Main {
         System.out.println("Enter your second word.");
         s2 = scan.nextLine();
 
-        char[] s1Array = s1.toCharArray();
-        char[] s2Array = s2.toCharArray();
+        char[] s1Array = s1.toLowerCase().toCharArray();
+        char[] s2Array = s2.toLowerCase().toCharArray();
 
         int count = 0;
 
