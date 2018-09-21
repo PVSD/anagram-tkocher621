@@ -1,5 +1,6 @@
 package com.company;
 import java.util.*;
+// This was made before i knew java.util.Arrays existed so this is way more complicated then it needed to be
 
 public class Main {
 
